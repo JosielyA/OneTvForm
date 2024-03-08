@@ -182,11 +182,12 @@ function IndexPage() {
             placeholder="Teléfono"
             required
           />
-          <h2 className="text-2xl font-bold">Pedidos</h2>
-          <div className="xl:w-4/12 w-7/12 flex items-center place-content-end">
+
+          <div className="xl:w-4/12 w-7/12 flex flex-wrap items-center place-content-between mt-8">
+            <h2 className="text-3xl font-bold">Pedidos</h2>
             <button
               onClick={(e) => addPedido(e)}
-              className="absolute mt-10 mr-4 flex items-center border bg-blue-800 rounded-sm text-white font-bold text-md uppercase p-2 mx-2 disabled:opacity-50"
+              className="flex items-center border bg-blue-800 rounded-sm text-white font-bold text-md uppercase p-2 mx-2 disabled:opacity-50"
               disabled={loading}
             >
               <FaPlus className="mr-1" />
@@ -245,7 +246,7 @@ function IndexPage() {
                     </label>
                   </div>
                   <input
-                    className="md:p-4  mt-1 border-blue-800 border-2 border-dashed mb-2 rounded-md bg-gray-300"
+                    className="md:p-4 w-full mt-1 border-blue-800 border-2 border-dashed mb-2 rounded-md bg-gray-300"
                     type="file"
                     name={`imagenes_${i}`}
                     multiple
