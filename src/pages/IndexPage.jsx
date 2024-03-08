@@ -85,7 +85,7 @@ function IndexPage() {
         pedido_imagenes,
       };
       try {
-        res = Axios.post(`${serverurl}/formulario`, data);
+        const res = Axios.post(`${serverurl}/formulario`, data);
         console.log(res);
 
         toast.success(`Pedido #${i + 1} enviado.`);
