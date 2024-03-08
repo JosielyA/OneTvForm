@@ -5,7 +5,8 @@ import PulseLoader from "react-spinners/PulseLoader";
 import { FaPlus } from "react-icons/fa";
 
 function IndexPage() {
-  const serverurl = "https://onetvformserver.up.railway.app";
+  const serverurl =
+    "https://onetvformback.netlify.app/.netlify/functions/server/api";
   const [pedidos, setPedidos] = useState([
     { titulo: "", descripcion: "", imagenes: [] },
   ]);
@@ -84,7 +85,7 @@ function IndexPage() {
         pedido_imagenes,
       };
       try {
-        res = Axios.post(`${serverurl}/api/formulario`, data);
+        res = Axios.post(`${serverurl}/formulario`, data);
         console.log(res);
 
         toast.success(`Pedido #${i + 1} enviado.`);
