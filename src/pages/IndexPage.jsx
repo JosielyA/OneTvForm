@@ -96,6 +96,7 @@ function IndexPage() {
           }, 3000);
         }
       } catch (error) {
+        console.log(error);
         toast.error(`Error, pedido #${i + 1} no se pudo enviar.`);
         setLoading((prev) => !prev);
       }
