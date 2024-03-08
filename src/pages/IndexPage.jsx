@@ -245,7 +245,7 @@ function IndexPage() {
                     </label>
                   </div>
                   <input
-                    className="p-4 mt-1 border-blue-800 border-2 border-dashed mb-2 rounded-md bg-gray-300"
+                    className="md:p-4  mt-1 border-blue-800 border-2 border-dashed mb-2 rounded-md bg-gray-300"
                     type="file"
                     name={`imagenes_${i}`}
                     multiple
