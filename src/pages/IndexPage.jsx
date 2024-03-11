@@ -138,60 +138,60 @@ function IndexPage() {
               Formulario de pedidos
             </h2>
           </div>
-          <div className="xl:w-4/12 w-6/12 ">
+          <div className="xl:w-4/12 md:w-6/12  w-10/12 ">
             <label className="text-black font-semibold  " htmlFor="nombre">
               Nombre
             </label>
           </div>
           <input
             onChange={(ev) => setNombre(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
+            className="xl:w-4/12 md:w-6/12  w-10/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="nombre"
             placeholder="Nombre"
             required
           />
-          <div className="xl:w-4/12 w-6/12 mb-1 ">
+          <div className="xl:w-4/12 md:w-6/12  w-10/12 mb-1 ">
             <label className="text-black font-semibold " htmlFor="compania">
               Compañía
             </label>
           </div>
           <input
             onChange={(ev) => setCompania(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
+            className="xl:w-4/12 md:w-6/12  w-10/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="compania"
             placeholder="Compañía"
             required
           />
-          <div className="xl:w-4/12 w-6/12 mb-1 ">
+          <div className="xl:w-4/12 md:w-6/12  w-10/12 mb-1 ">
             <label className="text-black font-semibold " htmlFor="correo">
               Correo
             </label>
           </div>
           <input
             onChange={(ev) => setCorreo(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
+            className="xl:w-4/12 md:w-6/12  w-10/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="correo"
             placeholder="Correo"
             required
           />
-          <div className="xl:w-4/12 w-6/12 ">
+          <div className="xl:w-4/12 md:w-6/12  w-10/12 ">
             <label className="text-black font-semibold " htmlFor="telefono">
               Teléfono
             </label>
           </div>
           <input
             onChange={(ev) => setTelefono(ev.target.value)}
-            className="xl:w-4/12 w-6/12 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
+            className="xl:w-4/12 md:w-6/12  w-10/12 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="telefono"
             placeholder="Teléfono"
             required
           />
 
-          <div className="xl:w-4/12 w-6/12 flex flex-wrap items-center place-content-between mt-5">
+          <div className="xl:w-4/12 md:w-6/12  w-10/12 flex flex-wrap items-center place-content-between mt-5">
             <h2 className="text-3xl font-semibold font-[Poppins]">Pedidos</h2>
             <button
               onClick={(e) => addPedido(e)}
@@ -202,7 +202,7 @@ function IndexPage() {
               <span>Agregar Pedido</span>
             </button>
           </div>
-          <div className="p-4 xl:w-4/12 w-6/12">
+          <div className="p-4 xl:w-4/12 md:w-6/12  w-10/12">
             {pedidos.map((pedido, i) => (
               <div key={i}>
                 <div className="w-full">
@@ -256,7 +256,7 @@ function IndexPage() {
                     </label>
                   </div>
                   <input
-                    className="md:p-4 w-full mt-1 border-turquesa border-2 border-dashed mb-2 rounded-md bg-grisClaro"
+                    className="p-4 w-full mt-1 border-turquesa border-2 border-dashed mb-2 rounded-md bg-grisClaro"
                     type="file"
                     name={`imagenes_${i}`}
                     multiple
