@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import PulseLoader from "react-spinners/PulseLoader";
 import { FaPlus } from "react-icons/fa";
+import OneTvLogo from "../assets/one tv logo.png";
 
 function IndexPage() {
   const serverurl =
@@ -120,6 +121,9 @@ function IndexPage() {
           />
         </div>
       </div>
+      <div className="flex place-content-center m-10 mb-4">
+        <img src={OneTvLogo} className="w-[250px]" />
+      </div>
       <form
         onSubmit={(ev) => {
           submit(ev);
@@ -127,90 +131,96 @@ function IndexPage() {
       >
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center p-3">
-            <h1 className="text-3xl font-bold ">OneTvStudio</h1>
-            <h2 className="text-2xl font-bold mb-3">Formulario de Pedidos</h2>
+            <h1 className="text-2xl font-['Roboto'] font-semibold ">
+              OneTvStudio
+            </h1>
+            <h2 className="text-xl font-semibold mb-3 font-['Roboto']">
+              Formulario de pedidos
+            </h2>
           </div>
           <div className="xl:w-4/12 w-6/12 ">
-            <label className="text-black font-bold" htmlFor="nombre">
+            <label className="text-black font-semibold  " htmlFor="nombre">
               Nombre
             </label>
           </div>
           <input
             onChange={(ev) => setNombre(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 p-1 border-blue-800 border-b-4 border-x-[1px] rounded-md placeholder-slate-600 font-semibold"
+            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="nombre"
             placeholder="Nombre"
             required
           />
           <div className="xl:w-4/12 w-6/12 mb-1 ">
-            <label className="text-black font-bold" htmlFor="compania">
+            <label className="text-black font-semibold " htmlFor="compania">
               Compañía
             </label>
           </div>
           <input
             onChange={(ev) => setCompania(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 p-1 border-blue-800 border-b-4 border-x-[1px] rounded-md placeholder-slate-600 font-semibold"
+            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="compania"
             placeholder="Compañía"
             required
           />
           <div className="xl:w-4/12 w-6/12 mb-1 ">
-            <label className="text-black font-bold" htmlFor="correo">
+            <label className="text-black font-semibold " htmlFor="correo">
               Correo
             </label>
           </div>
           <input
             onChange={(ev) => setCorreo(ev.target.value)}
-            className="xl:w-4/12 w-6/12 mb-1 p-1 border-blue-800 border-b-4 border-x-[1px] rounded-md placeholder-slate-600 font-semibold"
+            className="xl:w-4/12 w-6/12 mb-1 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="correo"
             placeholder="Correo"
             required
           />
           <div className="xl:w-4/12 w-6/12 ">
-            <label className="text-black font-bold" htmlFor="telefono">
+            <label className="text-black font-semibold " htmlFor="telefono">
               Teléfono
             </label>
           </div>
           <input
             onChange={(ev) => setTelefono(ev.target.value)}
-            className="xl:w-4/12 w-6/12 p-1 border-blue-800 border-b-4 border-x-[1px] rounded-md placeholder-slate-600 font-semibold"
+            className="xl:w-4/12 w-6/12 py-1 px-3 border-turquesa border-b-4 border-x-[1px] rounded-lg font-semibold  text-turquesa placeholder-turquesa"
             type="text"
             name="telefono"
             placeholder="Teléfono"
             required
           />
 
-          <div className="xl:w-4/12 w-7/12 flex flex-wrap items-center place-content-between mt-8">
-            <h2 className="text-3xl font-bold">Pedidos</h2>
+          <div className="xl:w-4/12 w-6/12 flex flex-wrap items-center place-content-between mt-5">
+            <h2 className="text-3xl font-semibold font-[Poppins]">Pedidos</h2>
             <button
               onClick={(e) => addPedido(e)}
-              className="flex items-center border bg-blue-800 rounded-sm text-white font-bold text-md uppercase p-2 mx-2 disabled:opacity-50"
+              className="flex items-center border bg-celeste text-black rounded-sm font-bold text-md uppercase p-2 mx-2 disabled:opacity-50"
               disabled={loading}
             >
               <FaPlus className="mr-1" />
               <span>Agregar Pedido</span>
             </button>
           </div>
-          <div className="p-4 xl:w-4/12 w-7/12">
+          <div className="p-4 xl:w-4/12 w-6/12">
             {pedidos.map((pedido, i) => (
               <div key={i}>
                 <div className="w-full">
-                  <h2 className="font-bold text-xl">Pedido #{i + 1}</h2>
+                  <h2 className="font-medium text-xl text-turquesa">
+                    Pedido #{i + 1}
+                  </h2>
                 </div>
-                <div className="flex flex-col  items-center bg-gray-400 p-4 mb-4 rounded-md">
+                <div className="flex flex-col  items-center bg-grisOscuro p-4 mb-4 rounded-lg">
                   <div className="w-full">
                     <label
-                      className="text-black font-bold"
+                      className="text-black font-semibold "
                       htmlFor={`titulo_${i}`}
                     >
                       Título
                     </label>
                   </div>
                   <input
-                    className="w-full p-1 border-blue-800 border-b-4 border-x-[1px] my-2 rounded-md bg-gray-400 placeholder-slate-700 font-semibold"
+                    className="w-full py-1 px-3 border-turquesa border-b-4 border-x-[1px] my-2 rounded-lg bg-grisOscuro placeholder-turquesa font-semibold"
                     type="text"
                     name={`titulo_${i}`}
                     placeholder="Título"
@@ -221,14 +231,14 @@ function IndexPage() {
                   />
                   <div className="w-full">
                     <label
-                      className="text-black font-bold"
+                      className="text-black font-semibold "
                       htmlFor={`descripcion_${i}`}
                     >
                       Descripción
                     </label>
                   </div>
                   <textarea
-                    className="w-full mt-1 h-[100px] p-1 border-blue-800 border-b-4 border-x-[1px] mb-2 rounded-md bg-gray-400 placeholder-slate-700 font-semibold"
+                    className="w-full mt-1 h-[100px] py-1 px-3 border-turquesa border-b-4 border-x-[1px] mb-2 rounded-lg bg-grisOscuro placeholder-turquesa font-semibold"
                     type="text"
                     name={`descripcion_${i}`}
                     onChange={(ev) => {
@@ -239,14 +249,14 @@ function IndexPage() {
                   />
                   <div className="w-full">
                     <label
-                      className="text-black font-bold"
+                      className="text-black font-semibold "
                       htmlFor={`imagenes_${i}`}
                     >
                       Imagenes
                     </label>
                   </div>
                   <input
-                    className="md:p-4 w-full mt-1 border-blue-800 border-2 border-dashed mb-2 rounded-md bg-gray-300"
+                    className="md:p-4 w-full mt-1 border-turquesa border-2 border-dashed mb-2 rounded-md bg-grisClaro"
                     type="file"
                     name={`imagenes_${i}`}
                     multiple
@@ -270,7 +280,7 @@ function IndexPage() {
             ))}
             <div className="flex place-content-center">
               <button
-                className="bg-blue-800 text-white font-bold text-2xl py-2 px-16 rounded-sm mx-2 disabled:opacity-50"
+                className="bg-celeste text-black font-bold text-2xl py-2 px-16 rounded-sm mx-2 disabled:opacity-50"
                 disabled={loading}
               >
                 Enviar

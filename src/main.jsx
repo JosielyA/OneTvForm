@@ -29,7 +29,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div>
     <IconContext.Provider
-      value={{ color: "white", size: "20px", className: "global-class-name" }}
+      value={{ color: "black", size: "25px", className: "global-class-name" }}
     >
       <div>
         <Toaster />
