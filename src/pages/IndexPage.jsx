@@ -52,7 +52,7 @@ function IndexPage() {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file);
-
+      //hola
       fileReader.onload = () => {
         resolve(fileReader.result);
       };
